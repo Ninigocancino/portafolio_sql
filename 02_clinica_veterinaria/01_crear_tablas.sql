@@ -14,3 +14,13 @@ CREATE TABLE IF NOT EXISTS veterinarios(
     nombre TEXT NOT NULL,
     especialidad TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS citas(
+    id_cita INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_mascota INTEGER,
+    id_veterinario INTEGER,
+    fecha TEXT NOT NULL,
+    motivo TEXT NOT NULL,
+    FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+    FOREIGN KEY (id_veterinario) REFERENCES veterinarios(id_veterinario)
+);
