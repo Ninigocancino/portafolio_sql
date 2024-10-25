@@ -6,3 +6,11 @@ CREATE TABLE IF NOT EXISTS habitaciones (
     precio_noche REAL NOT NULL,
     estado TEXT NOT NULL
 );
+
+--Crear tabla de clientes
+CREATE TABLE IF NOT EXISTS clientes (
+    id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    telefono TEXT NOT NULL,
+    email TEXT
+);
