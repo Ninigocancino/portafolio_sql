@@ -6,3 +6,11 @@ CREATE TABLE IF NOT EXISTS pacientes(
     telefono TEXT,
     email TEXT
 );
+
+--Crear tabla de tretamientos
+CREATE TABLE IF NOT EXISTS tratamientos (
+    id_tratamiento INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    descripcion TEXT,
+    costo REAL NOT NULL
+);
