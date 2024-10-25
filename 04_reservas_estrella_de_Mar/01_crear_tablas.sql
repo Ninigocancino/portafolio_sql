@@ -14,3 +14,14 @@ CREATE TABLE IF NOT EXISTS clientes (
     telefono TEXT NOT NULL,
     email TEXT
 );
+
+--Crear tabla de reservas
+CREATE TABLE IF NOT EXISTS reservas(
+    id_reserva INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_habitacion INTEGER,
+    id_cliente INTEGER,
+    fecha_entrada TEXT NOT NULL,
+    fecha_salida TEXT NOT NULL,
+    FOREIGN KEY (id_habitacion) REFERENCES habitaciones(id_habitacion),
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+);
