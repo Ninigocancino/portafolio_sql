@@ -5,3 +5,4 @@ CREATE TABLE IF NOT EXISTS pacientes(
     telefono TEXT,
     email TEXT
 );
+
